@@ -17,6 +17,5 @@ RUN apt-get install -y openjdk-8-jdk
 # --- Install Android
 
 
-
 # ------------------------------------------------------
 # --- Install required tools
