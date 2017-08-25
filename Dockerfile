@@ -9,7 +9,7 @@ RUN apt-get update
 # --- Install Utility Programs
 
 # --- unzip
-RUN apt-get install -y unzip curl
+RUN apt-get install -y zip unzip curl
 
 # --- sdkman
 RUN curl -s "https://get.sdkman.io" | bash
