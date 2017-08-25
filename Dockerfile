@@ -9,11 +9,10 @@ RUN apt-get update
 # --- Install Utility Programs
 
 # --- unzip
-RUN apt-get install -y unzip
+RUN apt-get install -y unzip curl
 
 # --- sdkman
 RUN curl -s "https://get.sdkman.io" | bash
-RUN source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ------------------------------------------------------
 # --- Install JDK
