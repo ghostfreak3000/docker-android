@@ -34,7 +34,8 @@ RUN apt-get install -y libbz2-1.0 lib32z1 lib32ncurses5 lib32stdc++6
 
 # --- sdk
 RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip 
-RUN ls
+RUN unzip -d /opt sdk-tools-linux-3859397.zip
+RUN ls /opt
 
 # ------------------------------------------------------
 # --- Install required tools
