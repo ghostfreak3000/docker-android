@@ -23,6 +23,8 @@ RUN wget https://downloads.gradle.org/distributions/gradle-4.1-bin.zip
 RUN mkdir /opt/gradle
 RUN unzip -d /opt/gradle gradle-4.1-bin.zip
 RUN ls /opt/gradle/gradle-4.1
+ENV GRADLE_HOME /opt/gradle/gradle-4.1
+ENV PATH ${PATH}:${GRADLE_HOME}/bin
 
 # ------------------------------------------------------
 # --- Install Android
