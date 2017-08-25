@@ -8,7 +8,7 @@ RUN apt-get update
 # ------------------------------------------------------
 # --- Install Utility Programs
 
-RUN apt-get install -y unzip
+RUN apt-get install -y unzip wget
 
 # ------------------------------------------------------
 # --- Install JDK
@@ -30,10 +30,11 @@ ENV PATH ${PATH}:${GRADLE_HOME}/bin
 # --- Install Android
 
 # --- dependencies
-#RUN apt-get install -y libbz2-1.0 lib32z1 lib32ncurses5 lib32stdc++6
+RUN apt-get install -y libbz2-1.0 lib32z1 lib32ncurses5 lib32stdc++6
 
 # --- sdk
-#RUN cd /opt && wget --quiet https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip && unzip sdk-tools-linux-3859397.zip && ls && pwd 
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip 
+RUN ls
 
 # ------------------------------------------------------
 # --- Install required tools
