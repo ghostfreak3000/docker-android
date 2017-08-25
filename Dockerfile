@@ -28,5 +28,6 @@ RUN sdk install gradle 4.1
 # ------------------------------------------------------
 # --- Install Android
 
+RUN cd /opt && wget --quiet https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip && unzip sdk-tools-linux-3859397.zip && ls && pwd 
 # ------------------------------------------------------
 # --- Install required tools
