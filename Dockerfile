@@ -43,6 +43,8 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_
 RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0"
 
 # ------------------------------------------------------
-# --- Clear zip files
+# --- Clean up
 RUN rm gradle-4.1-bin.zip
 RUN rm sdk-tools-linux-3859397.zip
+RUN apt-get clean
+
