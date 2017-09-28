@@ -40,7 +40,7 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 
 # --- install platform-25 and build-tools-25.0.0
-RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0" "extra-android-support" "extra-google-google_play_services_froyo" "extra-google-google_play_services" "extra-google-m2repository" "extra-google-play_apk_expansion" "extra-google-play_billing" "extra-google-play_licensing" "extra-google-webdriver"                               
+RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0"
 
 # ------------------------------------------------------
 # --- Clean up
