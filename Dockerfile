@@ -8,7 +8,7 @@ RUN apt-get update
 # ------------------------------------------------------
 # --- Install Utility Programs
 
-RUN apt-get install -y unzip wget
+RUN apt-get install -y unzip wget curl
 
 # ------------------------------------------------------
 # --- Install JDK
@@ -41,6 +41,12 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_
 
 # --- install platform-25 and build-tools-25.0.0
 RUN echo "y" | sdkmanager --verbose "platforms;android-25" "platforms;android-26" "build-tools;25.0.0" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository" "extras;google;market_apk_expansion" "extras;google;market_licensing" "extras;google;webdriver" "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha7"
+
+# ------------------------------------------------------
+# --- Install NodeJS
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs build-essential
 
 # ------------------------------------------------------
 # --- Clean up
