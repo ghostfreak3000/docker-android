@@ -45,8 +45,8 @@ RUN echo "y" | sdkmanager --verbose "platforms;android-25" "platforms;android-26
 # ------------------------------------------------------
 # --- Install NodeJS
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs build-essential
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs build-essential
 
 # ------------------------------------------------------
 # --- Clean up
