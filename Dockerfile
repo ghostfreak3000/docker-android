@@ -39,8 +39,8 @@ RUN chown -R root:root /opt/android-sdk-linux
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 
-# --- install platform-25 and build-tools-25.0.0
-RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0"
+# --- install platforms and build tools
+RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0" "build-tools;26.0.1" 
 
 # ------------------------------------------------------
 # --- Clean up
