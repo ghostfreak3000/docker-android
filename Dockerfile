@@ -8,7 +8,7 @@ RUN apt-get update
 # ------------------------------------------------------
 # --- Install Utility Programs
 
-RUN apt-get install -y unzip wget
+RUN apt-get install -y unzip wget curl
 
 # ------------------------------------------------------
 # --- Install JDK
@@ -39,8 +39,15 @@ RUN chown -R root:root /opt/android-sdk-linux
 ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/tools/bin
 
-# --- install platforms and build tools
-RUN echo "y" | sdkmanager --verbose "platforms;android-25" "build-tools;25.0.0" "build-tools;26.0.1" 
+# --- install platform-25 and build-tools-25.0.0
+RUN yes | sdkmanager --verbose --licenses
+RUN echo "y" | sdkmanager --verbose "patcher;v4" "tools" "platforms;android-26" "platforms;android-25" "platforms;android-26" "build-tools;25.0.0" "build-tools;26.0.1" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository" "extras;google;market_apk_expansion" "extras;google;market_licensing" "extras;google;webdriver" "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha7"
+
+# ------------------------------------------------------
+# --- Install NodeJS
+
+RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
+RUN apt-get install -y nodejs build-essential
 
 # ------------------------------------------------------
 # --- Clean up
