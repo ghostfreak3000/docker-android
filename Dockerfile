@@ -51,7 +51,7 @@ RUN apt-get install -y nodejs build-essential
 
 # ------------------------------------------------------
 # --- Clean up
-RUN rm gradle-4.1-bin.zip
+RUN rm gradle-4.4-bin.zip
 RUN rm sdk-tools-linux-3859397.zip
 RUN apt-get clean
 
