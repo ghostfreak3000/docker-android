@@ -19,10 +19,10 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
 # ------------------------------------------------------
 # --- Install Gradle
 
-RUN wget https://downloads.gradle.org/distributions/gradle-4.1-bin.zip
+RUN wget https://downloads.gradle.org/distributions/gradle-4.4-bin.zip
 RUN mkdir /opt/gradle
-RUN unzip -d /opt/gradle gradle-4.1-bin.zip
-ENV GRADLE_HOME /opt/gradle/gradle-4.1
+RUN unzip -d /opt/gradle gradle-4.4-bin.zip
+ENV GRADLE_HOME /opt/gradle/gradle-4.4
 ENV PATH ${PATH}:${GRADLE_HOME}/bin
 
 # ------------------------------------------------------
