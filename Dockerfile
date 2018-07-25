@@ -41,7 +41,7 @@ ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools:${ANDROID_
 
 # --- install platform-25 and build-tools-25.0.0
 RUN yes | sdkmanager --verbose --licenses
-RUN echo "y" | sdkmanager --verbose "patcher;v4" "tools" "platforms;android-26" "platforms;android-25" "platforms;android-26" "build-tools;25.0.0" "build-tools;26.0.1" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository" "extras;google;market_apk_expansion" "extras;google;market_licensing" "extras;google;webdriver" "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha7"
+RUN echo "y" | sdkmanager --verbose "patcher;v4" "tools" "platforms;android-26" "platforms;android-25" "platforms;android-26" "platforms;android-27" "build-tools;25.0.0" "build-tools;26.0.1" "build-tools;27.0.3" "extras;android;m2repository" "extras;google;google_play_services" "extras;google;m2repository" "extras;google;market_apk_expansion" "extras;google;market_licensing" "extras;google;webdriver" "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.0-alpha7" "extras;m2repository;com;android;support;constraint;constraint-layout;1.0.2"
 
 # ------------------------------------------------------
 # --- Install NodeJS
